@@ -1,0 +1,56 @@
+
+import numpy as np
+
+
+pip install tensorflow
+
+
+import tensorflow as tf
+
+
+print(tf.__version__)
+
+
+2.
+
+from keras import datasets
+# Load MNIST datasets from keras
+(train_images, train_labels), (test_images, test_labels) = datasets.mnist.load_data()
+
+
+train_images.shape
+
+test_images.shape
+
+
+3.
+
+pip install Theano
+
+import theano.tensor as T
+from theano import function
+
+# Declaring 2 variables
+x = T.dscalar('x')
+y = T.dscalar('y')
+
+# Summing up the 2 numbers
+z = x + y
+
+# Converting it to a callable object so that it takes matrix as parameters
+f = function([x, y], z)
+
+f(5, 7)
+
+
+
+4.
+
+pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu115
+
+import torch
+import torch.nn as nn
+
+print(torch.__version__)
+
+torch.cuda.is_available()
